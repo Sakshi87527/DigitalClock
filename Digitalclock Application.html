@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <style>
+            .clock{
+              background-color: greenyellow;  
+              height: 90px;
+              width: 300px;
+              margin-top: 70px;
+              margin-left: 600px;
+              color: crimson;
+              font-size: 50px;
+              border-radius: 7px;
+            }
+        </style>
+
+
+    </head>
+    <body onload="data()">
+        <div class="clock">
+            <p id="demo" style=" padding-left: 50px; padding-top:10px ;" ></p>
+        </div>
+
+<script>
+    function data()
+    {
+        var datedata = new Date();
+
+        var h = datedata.getHours();
+        var m = datedata.getMinutes();
+        var s = datedata.getSeconds();
+        document.getElementById("demo").innerHTML = h+" : "+m+" : "+s ;
+        
+        setTimeout(data,1000);
+    }
+</script>
+    </body>
+</html>
